@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Comparing Graphs</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Which Graph Should I Use?</h1>
+
+  <p>
+    Enter commute times in minutes, separated by commas.
+  </p>
+
+  <textarea id="dataInput">
+8, 12, 15, 10, 22, 18, 12, 25, 15, 14
+  </textarea>
+
+  <select id="graphType">
+    <option value="dotplot">Dotplot</option>
+    <option value="histogram">Histogram</option>
+    <option value="boxplot">Boxplot</option>
+  </select>
+
+  <button id="makeGraph">Create Graph</button>
+
+  <div id="output"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
