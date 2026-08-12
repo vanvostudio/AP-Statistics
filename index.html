@@ -12,11 +12,21 @@
             box-sizing: border-box;
         }
 
+        :root {
+            --blue: #0277c9;
+            --blue-dark: #015f9f;
+            --blue-light: rgba(2, 119, 201, 0.08);
+            --blue-border: rgba(2, 119, 201, 0.25);
+            --text: #222;
+            --muted: #5f6870;
+            --background: #f8fbfd;
+        }
+
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            color: #222;
-            background-color: #fafafa;
+            color: var(--text);
+            background-color: var(--background);
             line-height: 1.6;
         }
 
@@ -26,9 +36,12 @@
             padding: 0 30px;
         }
 
+
+        /* Navigation */
+
         header {
             background-color: white;
-            border-bottom: 1px solid #ddd;
+            border-bottom: 3px solid var(--blue);
             padding: 20px 0;
         }
 
@@ -38,57 +51,84 @@
             align-items: center;
         }
 
-        nav a {
-            color: #222;
-            text-decoration: none;
+        nav strong {
+            color: var(--blue);
+            font-size: 1.15rem;
         }
 
+        nav a {
+            color: var(--blue);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            color: var(--blue-dark);
+        }
+
+
+        /* Hero */
+
         .hero {
-            padding: 100px 0 80px;
+            padding: 100px 0 90px;
+            background-color: var(--blue-light);
+            border-bottom: 1px solid var(--blue-border);
         }
 
         .hero h1 {
             font-size: 3.5rem;
+            color: var(--blue);
             margin: 0 0 15px;
         }
 
         .hero p {
             font-size: 1.3rem;
-            color: #555;
+            color: var(--muted);
             max-width: 700px;
         }
 
+
+        /* Units */
+
         .units {
-            padding: 30px 0 100px;
+            padding: 70px 0 100px;
         }
 
         .units h2 {
             font-size: 2rem;
+            color: var(--blue);
             margin-bottom: 30px;
         }
 
         .unit-card {
             display: block;
             background-color: white;
-            border: 1px solid #ddd;
+            border: 1px solid var(--blue-border);
+            border-left: 5px solid var(--blue);
             border-radius: 10px;
             padding: 30px;
             margin-bottom: 20px;
-            color: #222;
+            color: var(--text);
             text-decoration: none;
-            transition: transform 0.2s, box-shadow 0.2s;
+
+            transition:
+                transform 0.2s,
+                box-shadow 0.2s,
+                border-color 0.2s;
         }
 
         .unit-card:hover {
             transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+            border-color: var(--blue);
+            box-shadow: 0 8px 24px rgba(2, 119, 201, 0.15);
         }
 
         .unit-number {
-            color: #666;
+            color: var(--blue);
             font-size: 0.9rem;
+            font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
         }
 
         .unit-card h3 {
@@ -97,21 +137,34 @@
         }
 
         .unit-card p {
-            color: #666;
+            color: var(--muted);
             margin-bottom: 0;
         }
 
+
+        /* Coming Soon */
+
         .coming-soon {
             opacity: 0.55;
+            border-left-color: #aaa;
         }
 
+        .coming-soon .unit-number {
+            color: #777;
+        }
+
+
+        /* Footer */
+
         footer {
-            border-top: 1px solid #ddd;
+            background-color: white;
+            border-top: 1px solid var(--blue-border);
             padding: 30px 0;
             color: #777;
         }
     </style>
 </head>
+
 
 
 <body>
@@ -144,6 +197,49 @@
         </section>
 
 
+        <section class="project-notes">
+            <div class="container">
+            <h3>Project Notes</h3>
+
+            <p>
+                These notes and activities are adaptations designed to align with the
+                learning framework established by the College Board. The activities are
+                based on suggested activities from the publicly available
+                <em>AP Statistics Course and Exam Description</em> and have been
+                modified and expanded for this project.
+            </p>
+
+            <p>
+                The accompanying worksheets and digital assets are my own independent
+                creations. The pacing, scope and sequence, and learning objectives are
+                also adapted from the <em>AP Statistics Course and Exam Description</em>.
+            </p>
+
+            <p>
+                This portfolio project is an independent educational resource and is
+                not officially endorsed by, affiliated with, or connected to the
+                College Board.
+            </p>
+
+            <p>
+                <strong>References:</strong><br>
+
+                <a href="https://apstudents.collegeboard.org/courses/ap-statistics"
+                target="_blank"
+                rel="noopener noreferrer">
+                    AP Statistics — College Board
+                </a>
+                <br>
+
+                <a href="https://apcentral.collegeboard.org/media/pdf/ap-statistics-course-and-exam-description.pdf"
+                target="_blank"
+                rel="noopener noreferrer">
+                    AP Statistics Course and Exam Description (PDF)
+                </a>
+            </p>
+            </div>
+        </section>
+
         <section class="units">
 
             <div class="container">
@@ -151,7 +247,7 @@
                 <h2>Course Units</h2>
 
 
-                <a class="unit-card" href="unit-1/">
+                <a class="unit-card" href="unit-1/index.html">
 
                     <div class="unit-number">
                         Unit 1

@@ -17,13 +17,20 @@
 8, 12, 15, 10, 22, 18, 12, 25, 15, 14
   </textarea>
 
-  <select id="graphType">
-    <option value="dotplot">Dotplot</option>
-    <option value="histogram">Histogram</option>
-    <option value="boxplot">Boxplot</option>
-  </select>
+    <div class="controls">
 
-  <button id="makeGraph">Create Graph</button>
+        <select id="graphType">
+            <option value="dotplot">Dotplot</option>
+            <option value="histogram">Histogram</option>
+            <option value="boxplot">Boxplot</option>
+            <option value="stemplot">Stem-and-Leaf Plot</option>
+        </select>
+
+        <button id="makeGraph">
+            Create Graph
+        </button>
+
+    </div>
 
   <div id="output"></div>
 
