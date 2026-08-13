@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Distribution Sort | AP Statistics</title>
+
+    <link rel="stylesheet" href="../../style.css">
+</head>
+
+
+<body>
+
+    <header>
+        <div class="container">
+
+            <nav>
+                <strong>AP Statistics</strong>
+
+                <a href="../../">
+                    Unit 1
+                </a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <main>
+
+        <section class="intro">
+
+            <div class="container">
+
+                <div class="activity-label">
+                    Interactive Activity: Topic 1.9
+                </div>
+
+                <h1>How Are These Distributions Different?</h1>
+
+                <p class="description">
+                    Examine the nine distributions below. Drag each card
+                    onto the 3 × 3 gameboard. Arrange the distributions
+                    according to similarities and differences that you notice.
+                </p>
+
+                <div class="question">
+                    <strong>Think about:</strong>
+                    shape, center, spread, skewness, clusters, gaps,
+                    and unusual observations.
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="activity">
+
+            <div class="container">
+
+
+                <h2>Distribution Cards</h2>
+
+                <p>
+                    Drag each distribution onto an empty square.
+                </p>
+
+
+                <div id="cardBank" class="card-bank">
+
+                    <div class="distribution-card"
+                         draggable="true"
+                         id="card1"
+                         data-card="1">
+
+                        <div class="card-number">A</div>
+
+                        <div class="mini-plot"
+                             data-plot="symmetric">
+                        </div>
+
+                    </div>
+
+
+                    <div class="distribution-card"
+                         draggable="true"
+                         id="card2"
+                         data-card="2">
+
+                        <div class="card-number">B</div>
+
+                        <div class="mini-plot"
+                             data-plot="right-skew">
+                        </div>
+
+                    </div>
+
+
+                    <div class="distribution-card"
+                         draggable="true"
+                         id="card3"
+                         data-card="3">
+
+                        <div class="card-number">C</div>
+
+                        <div class="mini-plot"
+                             data-plot="left-skew">
+                        </div>
+
+                    </div>
+
+
+                    <div class="distribution-card"
+                         draggable="true"
+                         id="card4"
+                         data-card="4">
+
+                        <div class="card-number">D</div>
+
+                        <div class="mini-plot"
+                             data-plot="wide">
+                        </div>
+
+                    </div>
+
+
+                    <div class="distribution-card"
+                         draggable="true"
+                         id="card5"
+                         data-card="5">
+
+                        <div class="card-number">E</div>
+
+                        <div class="mini-plot"
+                             data-plot="narrow">
+                        </div>
+
+                    </div>
+
+
+                    <div class="distribution-card"
+                         draggable="true"
+                         id="card6"
+                         data-card="6">
+
+                        <div class="card-number">F</div>
+
+                        <div class="mini-plot"
+                             data-plot="bimodal">
+                        </div>
+
+                    </div>
+
+
+                    <div class="distribution-card"
+                         draggable="true"
+                         id="card7"
+                         data-card="7">
+
+                        <div class="card-number">G</div>
+
+                        <div class="mini-plot"
+                             data-plot="gap">
+                        </div>
+
+                    </div>
+
+
+                    <div class="distribution-card"
+                         draggable="true"
+                         id="card8"
+                         data-card="8">
+
+                        <div class="card-number">H</div>
+
+                        <div class="mini-plot"
+                             data-plot="outlier">
+                        </div>
+
+                    </div>
+
+
+                    <div class="distribution-card"
+                         draggable="true"
+                         id="card9"
+                         data-card="9">
+
+                        <div class="card-number">I</div>
+
+                        <div class="mini-plot"
+                             data-plot="high-center">
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="board-heading">
+
+                    <div>
+                        <h2>Your Gameboard</h2>
+
+                        <p>
+                            There is not necessarily one correct arrangement.
+                            Be prepared to explain your reasoning.
+                        </p>
+                    </div>
+
+                    <button id="resetButton">
+                        Reset Board
+                    </button>
+
+                </div>
+
+
+                <div id="gameboard" class="gameboard">
+
+                    <div class="board-cell" data-cell="1"></div>
+                    <div class="board-cell" data-cell="2"></div>
+                    <div class="board-cell" data-cell="3"></div>
+
+                    <div class="board-cell" data-cell="4"></div>
+                    <div class="board-cell" data-cell="5"></div>
+                    <div class="board-cell" data-cell="6"></div>
+
+                    <div class="board-cell" data-cell="7"></div>
+                    <div class="board-cell" data-cell="8"></div>
+                    <div class="board-cell" data-cell="9"></div>
+
+                </div>
+
+
+                <section class="reflection">
+
+                    <h2>Reflection</h2>
+
+                    <label for="reasoning">
+                        Explain how you organized your gameboard.
+                        What characteristics did you use?
+                    </label>
+
+                    <textarea
+                        id="reasoning"
+                        placeholder="I grouped these distributions because..."
+                    ></textarea>
+
+
+                    <label for="comparison">
+                        Choose two distributions that look similar.
+                        What makes them similar, and how are they different?
+                    </label>
+
+                    <textarea
+                        id="comparison"
+                        placeholder="Distributions ___ and ___ are similar because..."
+                    ></textarea>
+
+                    <button id="saveReflection">
+                        Save Response
+                    </button>
+                    <p id="saveMessage"></p>
+
+                    <div id="savedResponse"></div>
+
+
+                </section>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <div class="container">
+            <p>© 2026 Van Vo</p>
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

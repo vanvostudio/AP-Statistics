@@ -1,40 +1,268 @@
+
+<!-- =========================
+   Unit 1
+   ========================= -->
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Comparing Graphs</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Unit 1 | Van Vo</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        :root {
+            --blue: #0277c9;
+            --blue-dark: #015f9f;
+            --blue-light: rgba(2, 119, 201, 0.08);
+            --blue-border: rgba(2, 119, 201, 0.25);
+            --text: #222;
+            --muted: #5f6870;
+            --background: #f8fbfd;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: var(--text);
+            background-color: var(--background);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+
+
+        /* Navigation */
+
+        header {
+            background-color: white;
+            border-bottom: 3px solid var(--blue);
+            padding: 20px 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav strong {
+            color: var(--blue);
+            font-size: 1.15rem;
+        }
+
+        nav a {
+            color: var(--blue);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            color: var(--blue-dark);
+        }
+
+
+        /* Hero */
+
+        .hero {
+            padding: 100px 0 90px;
+            background-color: var(--blue-light);
+            border-bottom: 1px solid var(--blue-border);
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            color: var(--blue);
+            margin: 0 0 15px;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            color: var(--muted);
+            max-width: 700px;
+        }
+
+
+        /* Units */
+
+        .units {
+            padding: 70px 0 100px;
+        }
+
+        .units h2 {
+            font-size: 2rem;
+            color: var(--blue);
+            margin-bottom: 30px;
+        }
+
+        .unit-card {
+            display: block;
+            background-color: white;
+            border: 1px solid var(--blue-border);
+            border-left: 5px solid var(--blue);
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 20px;
+            color: var(--text);
+            text-decoration: none;
+
+            transition:
+                transform 0.2s,
+                box-shadow 0.2s,
+                border-color 0.2s;
+        }
+
+        .unit-card:hover {
+            transform: translateY(-3px);
+            border-color: var(--blue);
+            box-shadow: 0 8px 24px rgba(2, 119, 201, 0.15);
+        }
+
+        .unit-number {
+            color: var(--blue);
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        .unit-card h3 {
+            margin: 8px 0;
+            font-size: 1.5rem;
+        }
+
+        .unit-card p {
+            color: var(--muted);
+            margin-bottom: 0;
+        }
+
+
+        /* Coming Soon */
+
+        .coming-soon {
+            opacity: 0.55;
+            border-left-color: #aaa;
+        }
+
+        .coming-soon .unit-number {
+            color: #777;
+        }
+
+
+        /* Footer */
+
+        footer {
+            background-color: white;
+            border-top: 1px solid var(--blue-border);
+            padding: 30px 0;
+            color: #777;
+        }
+    </style>
 </head>
+
+
+
 <body>
 
-  <h1>Which Graph Should I Use?</h1>
-  <h2>Topic: 1.5</h2>
+    <header>
+        <div class="container">
+            <nav>
+                <strong>AP Statistics</strong>
 
-  <p>
-    Enter commute times in minutes, separated by commas.
-  </p>
+                <a href="https://vanvostudio.github.io/">
+                    Van Vo
+                </a>
+            </nav>
+        </div>
+    </header>
 
-  <textarea id="dataInput">
-8, 12, 15, 10, 22, 18, 12, 25, 15, 14
-  </textarea>
 
-    <div class="controls">
+    <main>
 
-        <select id="graphType">
-            <option value="dotplot">Dotplot</option>
-            <option value="histogram">Histogram</option>
-            <option value="boxplot">Boxplot</option>
-            <option value="stemplot">Stem-and-Leaf Plot</option>
-        </select>
+        <section class="hero">
+            <div class="container">
 
-        <button id="makeGraph">
-            Create Graph
-        </button>
+                <h1>Unit 1 </h1>
 
-    </div>
+                <h3>
+                        Exploring One-Variable Data and Collecting Data
+                </h3>
 
-  <div id="output"></div>
+                <p>
+                        Explore distributions, graphical representations, summary statistics, and methods for collecting data.
+                </p>
 
-  <script src="script.js"></script>
+            </div>
+        </section>
+
+
+        <section class="units">
+
+            <div class="container">
+
+                <h2>Unit Activities</h2>
+
+
+                <a class="unit-card" href="Activity-1/index.html">
+
+                    <div class="unit-number">
+                        Activity 1
+                    </div>
+
+                    
+
+                </a>
+                
+                <a class="unit-card" href="Activity-2/index.html">
+
+                    <div class="unit-number">
+                        Activity 2
+                    </div>
+
+                    
+
+                </a>
+
+
+                <div class="unit-card coming-soon">
+
+                    <div class="unit-number">
+                        Activity 3
+                    </div>
+
+                    <h3>
+                        Exploring Two-Variable Data
+                    </h3>
+
+                    <p>Coming soon.</p>
+
+                </div>
+
+
+              
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <div class="container">
+            <p>© 2026 Van Vo</p>
+        </div>
+    </footer>
+
 </body>
+
 </html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Which Graph Should I Use? | AP Statistics</title>
+
+    <link rel="stylesheet" href="../../style.css">
+</head>
+
+
+<body>
+
+    <header>
+        <div class="container">
+
+            <nav>
+                <strong>AP Statistics</strong>
+
+                <a href="../../">
+                    Unit 1
+                </a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <main>
+
+        <section class="intro">
+
+            <div class="container">
+
+                <div class="activity-label">
+                    Interactive Activity: Topic 1.5
+                </div>
+
+                <h1>Which Graph Should I Use? </h1>
+
+                <p class="description">
+                    Enter commute times in minutes, separated by commas.
+                </p>
+                
+                <textarea id="dataInput">
+                  8, 12, 15, 10, 22, 18, 12, 25, 15, 14
+                </textarea>
+
+            </div>
+
+        </section>
+
+
+        <section class="activity">
+          <div class="controls">
+
+            <select id="graphType">
+
+              <option value="dotplot">Dotplot</option>
+              <option value="histogram">Histogram</option>
+              <option value="boxplot">Boxplot</option>
+              <option value="stemplot">Stem-and-Leaf Plot</option>
+
+            </select>
+
+            <button id="makeGraph">
+              Create Graph
+            </button>
+          </div>
+          <div class="container">
+            <div id="output"></div>
+          </div>
+        </section>
+
+    </main>
+
+
+    <footer>
+        <div class="container">
+            <p>© 2026 Van Vo</p>
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
