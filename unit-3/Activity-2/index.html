@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Activity 2 | AP Statistics</title>
+
+    <link rel="stylesheet" href="https://vanvostudio.github.io/css/base.css">
+    <link rel="stylesheet" href="https://vanvostudio.github.io/css/layout.css">
+    <link rel="stylesheet" href="https://vanvostudio.github.io/css/components.css">
+    <link rel="stylesheet" href="/AP-Statistics/css/activities/hypothesis-test-2.css">
+</head>
+
+
+<body>
+
+    <header>
+        <div class="container">
+
+            <nav>
+                <strong>AP Statistics</strong>
+
+                <a href="../index.html">
+                    Unit 3
+                </a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <main>
+
+        <section class="intro">
+
+            <div class="container">
+
+                <div class="activity-label">
+                    Interactive Activity: Topics 3.7, 3.13, 3.15
+                </div>
+
+              <h1>Make the Decision</h1>
+
+            <p class="description">
+                Use the p-value and significance level to make a
+                statistical decision, then state your conclusion
+                in context.
+            </p>
+
+            <div class="instructions">
+
+                <strong>Remember:</strong>
+
+                <p>
+                    If p-value ≤ α, reject H₀.
+                </p>
+
+                <p>
+                    If p-value &gt; α, fail to reject H₀.
+                </p>
+
+                <p>
+                    We do not say that we “accept H₀.”
+                </p>
+
+            </div>
+
+            </div>
+
+        </section>
+
+
+    <section class="activity">
+
+        <div class="container">
+
+            <div class="activity-header">
+
+                <div class="progress">
+                    Problem
+                    <span id="problemNumber">1</span>
+                    of
+                    <span id="problemTotal">6</span>
+                </div>
+
+            </div>
+
+
+            <div class="problem-card">
+
+                <div class="section-label">
+                    Context
+                </div>
+
+                <p
+                    id="context"
+                    class="context"
+                ></p>
+
+
+                <div class="hypothesis-box">
+
+                    <div>
+                        <span>H₀</span>
+                        <strong id="nullHypothesis"></strong>
+                    </div>
+
+                    <div>
+                        <span>Hₐ</span>
+                        <strong id="alternativeHypothesis"></strong>
+                    </div>
+
+                </div>
+
+
+                <div class="values">
+
+                    <div class="value-box">
+
+                        <span>p-value</span>
+
+                        <strong id="pValue"></strong>
+
+                    </div>
+
+
+                    <div class="comparison-symbol">
+                        ?
+                    </div>
+
+
+                    <div class="value-box">
+
+                        <span>α</span>
+
+                        <strong id="alpha"></strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- STEP 1 -->
+
+                <section class="step">
+
+                    <div class="step-number">
+                        Step 1
+                    </div>
+
+                    <h2>Compare</h2>
+
+                    <p>
+                        How does the p-value compare with α?
+                    </p>
+
+                    <div class="choice-group">
+
+                        <button
+                            class="comparison-choice"
+                            data-comparison="less"
+                        >
+                            p-value ≤ α
+                        </button>
+
+                        <button
+                            class="comparison-choice"
+                            data-comparison="greater"
+                        >
+                            p-value &gt; α
+                        </button>
+
+                    </div>
+
+                    <div
+                        id="comparisonFeedback"
+                        class="feedback"
+                    ></div>
+
+                </section>
+
+
+                <!-- STEP 2 -->
+
+                <section
+                    id="decisionStep"
+                    class="step locked"
+                >
+
+                    <div class="step-number">
+                        Step 2
+                    </div>
+
+                    <h2>Decide</h2>
+
+                    <p>
+                        What is the appropriate statistical decision?
+                    </p>
+
+                    <div class="choice-group">
+
+                        <button
+                            class="decision-choice"
+                            data-decision="reject"
+                        >
+                            Reject H₀
+                        </button>
+
+                        <button
+                            class="decision-choice"
+                            data-decision="fail"
+                        >
+                            Fail to Reject H₀
+                        </button>
+
+                        <button
+                            class="decision-choice"
+                            data-decision="accept"
+                        >
+                            Accept H₀
+                        </button>
+
+                    </div>
+
+                    <div
+                        id="decisionFeedback"
+                        class="feedback"
+                    ></div>
+
+                </section>
+
+
+                <!-- STEP 3 -->
+
+                <section
+                    id="conclusionStep"
+                    class="step locked"
+                >
+
+                    <div class="step-number">
+                        Step 3
+                    </div>
+
+                    <h2>Conclude in Context</h2>
+
+                    <p>
+                        Complete the statistical conclusion.
+                    </p>
+
+
+                    <div
+                        id="sentenceStarter"
+                        class="sentence-starter"
+                    ></div>
+
+
+                    <label for="studentConclusion">
+                        Now write the complete conclusion in your own words.
+                    </label>
+
+                    <textarea
+                        id="studentConclusion"
+                        placeholder="There is..."
+                    ></textarea>
+
+
+                    <button id="revealConclusion">
+                        Reveal Sample Conclusion
+                    </button>
+
+
+                    <div
+                        id="sampleConclusion"
+                        class="sample-conclusion"
+                    ></div>
+
+                </section>
+
+            </div>
+
+
+            <div class="navigation">
+
+                <button
+                    id="previousProblem"
+                    class="secondary-button"
+                >
+                    ← Previous
+                </button>
+
+                <button id="nextProblem">
+                    Next Problem →
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    </main>
+
+
+    <footer>
+        <div class="container">
+            <p>© 2026 Van Vo</p>
+        </div>
+    </footer>
+
+
+    <script src="script.js?v=1"></script>
+
+</body>
+
+</html>

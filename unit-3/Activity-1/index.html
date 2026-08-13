@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Activity 1 | AP Statistics</title>
+    <title>Activity 2 | AP Statistics</title>
 
     <link rel="stylesheet" href="https://vanvostudio.github.io/css/base.css">
     <link rel="stylesheet" href="https://vanvostudio.github.io/css/layout.css">
     <link rel="stylesheet" href="https://vanvostudio.github.io/css/components.css">
+    <link rel="stylesheet" href="/AP-Statistics/css/activities/hypothesis-test.css">
 </head>
 
 
@@ -21,8 +22,8 @@
             <nav>
                 <strong>AP Statistics</strong>
 
-                <a href="../../">
-                    Unit 1
+                <a href="../index.html">
+                    Unit 3
                 </a>
             </nav>
 
@@ -37,44 +38,177 @@
             <div class="container">
 
                 <div class="activity-label">
-                    Interactive Activity: Topic 1.5
+                    Interactive Activity: Topics 3.5, 3.12, 3.14
                 </div>
 
-                <h1>Which Graph Should I Use? </h1>
+                <h1>Hypothesis Debugger</h1>
 
                 <p class="description">
-                    Enter commute times in minutes, separated by commas.
+                    Each set of hypotheses contains a common mistake.
+                    Find the error, explain why it is incorrect, and
+                    rewrite the hypotheses correctly.
                 </p>
-                
-                <textarea id="dataInput">
-                  8, 12, 15, 10, 22, 18, 12, 25, 15, 14
-                </textarea>
+
+                <div class="instructions">
+                    <strong>Your task:</strong>
+                    For each problem, identify the incorrect component,
+                    explain the mistake, and write the corrected hypotheses.
+                </div>
 
             </div>
 
         </section>
 
 
-        <section class="activity">
-          <div class="controls">
 
-            <select id="graphType">
+    <section class="activity">
 
-              <option value="dotplot">Dotplot</option>
-              <option value="histogram">Histogram</option>
-              <option value="boxplot">Boxplot</option>
-              <option value="stemplot">Stem-and-Leaf Plot</option>
+        <div class="container">
 
-            </select>
+            <div class="activity-header">
 
-            <button id="makeGraph">
-              Create Graph
-            </button>
-          </div>
-          <div class="container">
-            <div id="output"></div>
-          </div>
-        </section>
+                <div class="progress">
+                    Problem
+                    <span id="problemNumber">1</span>
+                    of
+                    <span id="problemTotal">20</span>
+                </div>
+
+                <div
+                    id="testType"
+                    class="test-type"
+                ></div>
+
+            </div>
+
+
+            <div class="problem-card">
+
+                <h2>Scenario</h2>
+
+                <p
+                    id="scenario"
+                    class="scenario"
+                ></p>
+
+
+                <h2>Proposed Hypotheses</h2>
+
+                <div
+                    id="hypotheses"
+                    class="hypotheses"
+                ></div>
+
+
+                <div class="response-section">
+
+                    <label for="errorType">
+                        What is wrong with these hypotheses?
+                    </label>
+
+                    <select id="errorType">
+
+                        <option value="">
+                            Select the main error
+                        </option>
+
+                        <option value="statistic">
+                            Uses a statistic instead of a parameter
+                        </option>
+
+                        <option value="equality">
+                            Equality is in the wrong hypothesis
+                        </option>
+
+                        <option value="direction">
+                            Alternative hypothesis has the wrong direction
+                        </option>
+
+                        <option value="value">
+                            Incorrect hypothesized value
+                        </option>
+
+                        <option value="parameter">
+                            Incorrect parameter or parameter relationship
+                        </option>
+
+                        <option value="chisquare">
+                            Incorrect hypotheses for a chi-square test
+                        </option>
+
+                    </select>
+
+
+                    <label for="explanation">
+                        Explain why it is incorrect.
+                    </label>
+
+                    <textarea
+                        id="explanation"
+                        placeholder="This is incorrect because..."
+                    ></textarea>
+
+
+                    <label for="correctedHypotheses">
+                        Write the correct hypotheses.
+                    </label>
+
+                    <textarea
+                        id="correctedHypotheses"
+                        placeholder="H₀: ...&#10;Hₐ: ..."
+                    ></textarea>
+
+                </div>
+
+
+                <div class="controls">
+
+                    <button id="checkError">
+                        Check Error Type
+                    </button>
+
+                    <button
+                        id="revealAnswer"
+                        class="secondary-button"
+                    >
+                        Reveal Correction
+                    </button>
+
+                </div>
+
+
+                <div
+                    id="feedback"
+                    class="feedback"
+                ></div>
+
+
+                <div
+                    id="answer"
+                    class="answer"
+                ></div>
+
+            </div>
+
+
+            <div class="navigation">
+
+                <button
+                    id="previousProblem"
+                    class="secondary-button"
+                >
+                    ← Previous
+                </button>
+
+                <button id="nextProblem">
+                    Next Problem →
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
 
     </main>
 

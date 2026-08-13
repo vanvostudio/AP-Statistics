@@ -1,0 +1,200 @@
+/* =========================
+   Hypothesis Test Activity
+   ========================= */
+
+
+/* =========================
+   Activity Header
+   ========================= */
+
+.activity-header {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+.progress {
+    color: var(--muted);
+
+    font-weight: 600;
+}
+
+.test-type {
+    padding: 6px 12px;
+
+    color: var(--blue);
+    background-color: var(--blue-light);
+
+    border-radius: 20px;
+
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+
+/* =========================
+   Problem Card
+   ========================= */
+
+.problem-card {
+    padding: 35px;
+
+    background-color: var(--white);
+
+    border: 1px solid var(--blue-border);
+    border-top: 5px solid var(--blue);
+    border-radius: 12px;
+
+    box-shadow:
+        0 8px 24px rgba(2, 119, 201, 0.08);
+}
+
+.problem-card h2 {
+    margin-top: 25px;
+
+    color: var(--blue);
+
+    font-size: 1.25rem;
+}
+
+.problem-card h2:first-child {
+    margin-top: 0;
+}
+
+.scenario {
+    font-size: 1.05rem;
+}
+
+
+/* =========================
+   Hypotheses
+   ========================= */
+
+.hypotheses {
+    margin: 20px 0 35px;
+    padding: 25px;
+
+    background-color: var(--blue-light);
+
+    border-radius: var(--radius-medium);
+
+    text-align: center;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 1.25rem;
+}
+
+.hypothesis-line {
+    margin: 8px 0;
+}
+
+
+/* =========================
+   Response Section
+   ========================= */
+
+.response-section {
+    padding-top: 10px;
+}
+
+.response-section label {
+    margin-top: 22px;
+    margin-bottom: 7px;
+}
+
+
+/* =========================
+   Navigation
+   ========================= */
+
+.navigation {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 12px;
+
+    margin-top: 30px;
+}
+
+
+/* =========================
+   Feedback
+   ========================= */
+
+.feedback.correct {
+    display: block;
+
+    color: var(--green);
+
+    background-color: var(--green-light);
+}
+
+.feedback.incorrect {
+    display: block;
+
+    color: var(--red);
+
+    background-color: var(--red-light);
+}
+
+
+/* =========================
+   Answer
+   ========================= */
+
+.answer {
+    display: none;
+
+    margin-top: 20px;
+    padding: 22px;
+
+    background-color: var(--blue-light);
+
+    border-left: 4px solid var(--blue);
+    border-radius: var(--radius-small);
+}
+
+.answer.visible {
+    display: block;
+}
+
+.correct-hypotheses {
+    margin: 15px 0;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 1.1rem;
+}
+
+
+/* =========================
+   Mobile
+   ========================= */
+
+@media (max-width: 700px) {
+
+    .activity-header {
+        align-items: flex-start;
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+    .problem-card {
+        padding: 24px;
+    }
+
+    .navigation {
+        flex-direction: column;
+    }
+
+}

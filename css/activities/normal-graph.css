@@ -1,0 +1,106 @@
+/* =========================
+   Normal Graph Activity
+   ========================= */
+
+
+/* =========================
+   Progress
+   ========================= */
+
+.progress {
+    margin-bottom: 20px;
+
+    text-align: center;
+
+    color: var(--muted);
+
+    font-weight: 600;
+}
+
+
+/* =========================
+   Activity Card
+   ========================= */
+
+.activity-card {
+    padding: 35px;
+
+    background: var(--white);
+
+    border: 1px solid var(--blue-border);
+    border-top: 5px solid var(--blue);
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 8px 24px
+        rgba(2, 119, 201, 0.08);
+}
+
+
+/* =========================
+   Graph
+   ========================= */
+
+.graph-area {
+    max-width: 760px;
+
+    margin: 0 auto 30px;
+}
+
+
+#normalGraph {
+    display: block;
+
+    width: 100%;
+
+    min-height: 300px;
+}
+
+
+/* =========================
+   Response Area
+   ========================= */
+
+.response-area {
+    max-width: 760px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================
+   Sample Answer
+   ========================= */
+
+.sample-answer {
+    display: none;
+
+    margin-top: 25px;
+
+    padding: 20px;
+
+    background: var(--blue-light);
+
+    border-left: 4px solid var(--blue);
+
+    border-radius: 6px;
+}
+
+
+.sample-answer.visible {
+    display: block;
+}
+
+
+/* =========================
+   Mobile
+   ========================= */
+
+@media (max-width: 700px) {
+
+    .activity-card {
+        padding: 22px;
+    }
+
+}

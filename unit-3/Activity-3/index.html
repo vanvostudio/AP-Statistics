@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Activity 2 | AP Statistics</title>
+
+    <link rel="stylesheet" href="https://vanvostudio.github.io/css/base.css">
+    <link rel="stylesheet" href="https://vanvostudio.github.io/css/layout.css">
+    <link rel="stylesheet" href="https://vanvostudio.github.io/css/components.css">
+    <link rel="stylesheet" href="/AP-Statistics/css/activities/calculator-scribe.css">
+</head>
+
+
+<body>
+
+    <header>
+        <div class="container">
+
+            <nav>
+                <strong>AP Statistics</strong>
+
+                <a href="../index.html">
+                    Unit 3
+                </a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <main>
+
+        <section class="intro">
+
+            <div class="container">
+
+                <div class="activity-label">
+                    Interactive Activity: Topics 3.4, 3.11
+                </div>
+
+                <h1>Confidence Interval Partners</h1>
+
+                <p class="description">
+                    Work together to construct and interpret confidence intervals.
+                    Each partner has a different role.
+                </p>
+
+                <div class="instructions">
+
+                    <strong>Round 1:</strong>
+
+                    <p>
+                        Partner A is the Calculator Operator.
+                        Partner B is the Scribe.
+                    </p>
+
+                    <p>
+                        The Scribe explains what calculation should be performed.
+                        The Calculator Operator performs it.
+                    </p>
+
+                    <p>
+                        When writing is required, the Calculator Operator explains
+                        what should be written, and the Scribe enters it.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="activity">
+
+            <div class="container">
+
+                <!-- ROLES -->
+
+                <div class="roles">
+
+                    <div class="role-card calculator-role">
+
+                        <span>Partner A</span>
+
+                        <h2 id="partnerARole">
+                            Calculator Operator
+                        </h2>
+
+                        <p id="partnerADescription">
+                            You may perform calculations, but you may not type
+                            written explanations.
+                        </p>
+
+                    </div>
+
+
+                    <div class="role-card scribe-role">
+
+                        <span>Partner B</span>
+
+                        <h2 id="partnerBRole">
+                            Scribe
+                        </h2>
+
+                        <p id="partnerBDescription">
+                            You may enter written work, but you may not perform
+                            calculations.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ROUND -->
+
+                <div class="round-header">
+
+                    <div>
+
+                        <div class="step-label">
+                            Round <span id="roundNumber">1</span>
+                        </div>
+
+                        <h2 id="roundTitle">
+                            Confidence Interval for One Population Proportion
+                        </h2>
+
+                    </div>
+
+                    <div id="roundBadge" class="round-badge">
+                        One Proportion
+                    </div>
+
+                </div>
+
+
+                <!-- PROBLEM -->
+
+                <section class="problem-card">
+
+                    <h3>Scenario</h3>
+
+                    <p id="scenario"></p>
+
+
+                    <div id="dataDisplay" class="data-display"></div>
+
+
+                    <!-- STEP 1 -->
+
+                    <section class="step">
+
+                        <div class="step-label">
+                            Step 1
+                        </div>
+
+                        <h3>Plan the Calculation</h3>
+
+                        <p>
+                            The <strong>Scribe</strong> tells the Calculator Operator
+                            what needs to be calculated.
+                        </p>
+
+                        <label for="calculationInstruction">
+                            Scribe's instruction
+                        </label>
+
+                        <textarea
+                            id="calculationInstruction"
+                            placeholder="First calculate..."
+                        ></textarea>
+
+                    </section>
+
+
+                    <!-- STEP 2 -->
+
+                    <section class="step">
+
+                        <div class="step-label">
+                            Step 2
+                        </div>
+
+                        <h3>Calculate</h3>
+
+                        <p>
+                            Only the <strong>Calculator Operator</strong> enters
+                            numerical results here.
+                        </p>
+
+
+                        <div id="calculatorFields"></div>
+
+
+                        <button id="checkCalculation">
+                            Check Calculations
+                        </button>
+
+
+                        <div
+                            id="calculationFeedback"
+                            class="feedback"
+                        ></div>
+
+                    </section>
+
+
+                    <!-- STEP 3 -->
+
+                    <section
+                        id="writeStep"
+                        class="step locked"
+                    >
+
+                        <div class="step-label">
+                            Step 3
+                        </div>
+
+                        <h3>Construct the Interval</h3>
+
+                        <p>
+                            The Calculator Operator tells the Scribe what interval
+                            should be written.
+                        </p>
+
+
+                        <label for="intervalResponse">
+                            Scribe's interval
+                        </label>
+
+                        <input
+                            id="intervalResponse"
+                            type="text"
+                            placeholder="Example: (0.42, 0.58)"
+                        >
+
+
+                        <button id="checkInterval">
+                            Check Interval
+                        </button>
+
+
+                        <div
+                            id="intervalFeedback"
+                            class="feedback"
+                        ></div>
+
+                    </section>
+
+
+                    <!-- STEP 4 -->
+
+                    <section
+                        id="interpretStep"
+                        class="step locked"
+                    >
+
+                        <div class="step-label">
+                            Step 4
+                        </div>
+
+                        <h3>Interpret in Context</h3>
+
+                        <p>
+                            The Calculator Operator explains the interpretation.
+                            The Scribe writes it.
+                        </p>
+
+
+                        <div class="sentence-starter">
+
+                            We are
+                            <strong id="confidenceLevelText">95%</strong>
+                            confident that the interval from
+
+                            <span class="blank"></span>
+
+                            to
+
+                            <span class="blank"></span>
+
+                            captures the true
+
+                            <span class="blank long"></span>.
+
+                        </div>
+
+
+                        <label for="interpretation">
+                            Interpretation
+                        </label>
+
+                        <textarea
+                            id="interpretation"
+                            placeholder="We are 95% confident that..."
+                        ></textarea>
+
+
+                        <button id="revealInterpretation">
+                            Reveal Sample Interpretation
+                        </button>
+
+
+                        <div
+                            id="sampleInterpretation"
+                            class="sample-answer"
+                        ></div>
+
+                    </section>
+
+                </section>
+
+
+                <div class="round-controls">
+
+                    <button id="nextRound">
+                        Switch Roles & Start Round 2 →
+                    </button>
+
+                    <button
+                        id="resetActivity"
+                        class="secondary-button"
+                    >
+                        Restart
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <div class="container">
+            <p>© 2026 Van Vo</p>
+        </div>
+    </footer>
+
+
+    <script src="script.js?v=1"></script>
+
+</body>
+
+</html>

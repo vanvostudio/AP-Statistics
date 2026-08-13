@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Activity 2 | AP Statistics</title>
+
+    <link rel="stylesheet" href="https://vanvostudio.github.io/css/base.css">
+    <link rel="stylesheet" href="https://vanvostudio.github.io/css/layout.css">
+    <link rel="stylesheet" href="https://vanvostudio.github.io/css/components.css">
+    <link rel="stylesheet" href="/AP-Statistics/css/activities/normal-graph.css">
+</head>
+
+
+<body>
+
+    <header>
+        <div class="container">
+
+            <nav>
+                <strong>AP Statistics</strong>
+
+                <a href="../index.html">
+                    Unit 2
+                </a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <main>
+
+        <section class="intro">
+
+            <div class="container">
+
+                <div class="activity-label">
+                    Interactive Activity: Topics 2.11
+                </div>
+
+                <h1>Write the Question</h1>
+
+                <p class="description">
+                    Examine each normal distribution and use the shaded
+                    region to create a probability question that matches
+                    the picture.
+                </p>
+
+                <div class="instructions">
+                    <strong>Example:</strong>
+                    If 15 is marked on the axis and the region to the right
+                    of 15 is shaded, you might write:
+                    “What is the probability that a value is greater than 15?”
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="activity">
+
+            <div class="container">
+
+                <div class="progress">
+                    Picture
+                    <span id="pictureNumber">1</span>
+                    of
+                    <span id="pictureTotal">4</span>
+                </div>
+
+
+                <div class="activity-card">
+
+                    <div class="graph-area">
+
+                        <svg
+                            id="normalGraph"
+                            viewBox="0 0 700 340"
+                            role="img"
+                            aria-label="Normal distribution with shaded region"
+                        ></svg>
+
+                    </div>
+
+
+                    <div class="response-area">
+
+                        <label for="studentQuestion">
+                            Write a probability question that matches
+                            the shaded region.
+                        </label>
+
+                        <textarea
+                            id="studentQuestion"
+                            placeholder="What is the probability that..."
+                        ></textarea>
+
+
+                        <div class="controls">
+
+                            <button id="revealButton">
+                                Reveal Sample Question
+                            </button>
+
+                            <button
+                                id="nextButton"
+                                class="secondary-button"
+                            >
+                                Next Picture →
+                            </button>
+
+                        </div>
+
+
+                        <div
+                            id="sampleAnswer"
+                            class="sample-answer"
+                        ></div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <div class="container">
+            <p>© 2026 Van Vo</p>
+        </div>
+    </footer>
+
+
+    <script src="script.js?v=1"></script>
+
+</body>
+
+</html>

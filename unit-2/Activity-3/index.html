@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Activity 2 | AP Statistics</title>
+
+    <link rel="stylesheet" href="https://vanvostudio.github.io/css/base.css">
+    <link rel="stylesheet" href="https://vanvostudio.github.io/css/layout.css">
+    <link rel="stylesheet" href="https://vanvostudio.github.io/css/components.css">
+    <link rel="stylesheet" href="/AP-Statistics/css/activities/simulation-binomial.css">
+</head>
+
+
+<body>
+
+    <header>
+        <div class="container">
+
+            <nav>
+                <strong>AP Statistics</strong>
+
+                <a href="../index.html">
+                    Unit 2
+                </a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <main>
+
+        <section class="intro">
+
+            <div class="container">
+
+                <div class="activity-label">
+                    Interactive Activity: Topics 2.10
+                </div>
+
+                <h1>Predict and Confirm</h1>
+
+                <p class="description">
+                    Predict what a binomial distribution might look like,
+                    then run a simulation and compare the observed results
+                    with your prediction.
+                </p>
+
+                <div class="instructions">
+                    <strong>Setting:</strong>
+                    Let X be the number of successes in 16 independent trials,
+                    where the probability of success on each trial is
+                    p = 0.5.
+                </div>
+
+            </div>
+
+        </section>
+
+
+       <section class="activity">
+
+            <div class="container">
+
+                <!-- PREDICTION -->
+
+                <section class="panel">
+
+                    <div class="step-label">
+                        Step 1
+                    </div>
+
+                    <h2>Predict</h2>
+
+                    <p>
+                        Before running the simulation, think about what values
+                        X could take and which values you expect to occur most often.
+                    </p>
+
+                    <div class="prediction-grid">
+
+                        <div>
+
+                            <label for="centerPrediction">
+                                Around what value do you expect the distribution
+                                to be centered?
+                            </label>
+
+                            <input
+                                type="number"
+                                id="centerPrediction"
+                                min="0"
+                                max="16"
+                                placeholder="Example: 8"
+                            >
+
+                        </div>
+
+
+                        <div>
+
+                            <label for="shapePrediction">
+                                What shape do you expect?
+                            </label>
+
+                            <select id="shapePrediction">
+
+                                <option value="">
+                                    Select a shape
+                                </option>
+
+                                <option value="symmetric">
+                                    Approximately symmetric
+                                </option>
+
+                                <option value="right-skewed">
+                                    Right-skewed
+                                </option>
+
+                                <option value="left-skewed">
+                                    Left-skewed
+                                </option>
+
+                                <option value="uniform">
+                                    Approximately uniform
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <label for="predictionText">
+                        Which values do you think will occur most often?
+                        Explain your reasoning.
+                    </label>
+
+                    <textarea
+                        id="predictionText"
+                        placeholder="I predict that..."
+                    ></textarea>
+
+
+                    <button id="lockPrediction">
+                        Lock Prediction
+                    </button>
+
+
+                    <div
+                        id="predictionStatus"
+                        class="status-message"
+                    ></div>
+
+                </section>
+
+
+                <!-- SIMULATION -->
+
+                <section class="panel locked" id="simulationPanel">
+
+                    <div class="step-label">
+                        Step 2
+                    </div>
+
+                    <h2>Run the Simulation</h2>
+
+                    <p>
+                        Perform 20 repetitions of the binomial experiment.
+                        Each repetition consists of 16 independent trials
+                        with probability of success p = 0.5.
+                    </p>
+
+
+                    <div class="setting-display">
+
+                        <div>
+                            <span>n</span>
+                            <strong>16</strong>
+                        </div>
+
+                        <div>
+                            <span>p</span>
+                            <strong>0.5</strong>
+                        </div>
+
+                        <div>
+                            <span>Simulations</span>
+                            <strong>20</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="controls">
+
+                        <button id="runSimulation">
+                            Run 20 Trials
+                        </button>
+
+                        <button
+                            id="runAgain"
+                            class="secondary-button"
+                        >
+                            Run Again
+                        </button>
+
+                    </div>
+
+
+                    <div id="results" class="results">
+
+                        <p class="placeholder">
+                            Your simulation results will appear here.
+                        </p>
+
+                    </div>
+
+                </section>
+
+
+                <!-- COMPARE -->
+
+                <section class="panel locked" id="comparePanel">
+
+                    <div class="step-label">
+                        Step 3
+                    </div>
+
+                    <h2>Compare</h2>
+
+                    <div id="summary"></div>
+
+
+                    <label for="comparisonText">
+                        How did the simulated distribution compare with
+                        your prediction?
+                    </label>
+
+                    <textarea
+                        id="comparisonText"
+                        placeholder="My prediction was similar because..."
+                    ></textarea>
+
+
+                    <div class="reflection-questions">
+
+                        <p>
+                            <strong>Think about:</strong>
+                        </p>
+
+                        <ul>
+                            <li>
+                                Was the center close to what you expected?
+                            </li>
+
+                            <li>
+                                Were the most common values what you predicted?
+                            </li>
+
+                            <li>
+                                Did the distribution look as smooth as you expected?
+                            </li>
+
+                            <li>
+                                How might the graph change if we performed
+                                1,000 simulations instead of 20?
+                            </li>
+                        </ul>
+
+                    </div>
+
+                </section>
+
+
+                <div class="bottom-controls">
+
+                    <button
+                        id="resetActivity"
+                        class="secondary-button"
+                    >
+                        Restart Activity
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <div class="container">
+            <p>© 2026 Van Vo</p>
+        </div>
+    </footer>
+
+
+    <script src="script.js?v=1"></script>
+
+</body>
+
+</html>

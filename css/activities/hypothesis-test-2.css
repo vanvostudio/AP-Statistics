@@ -1,0 +1,223 @@
+/* =========================
+   Hypothesis Test Activity
+   ========================= */
+
+
+/* =========================
+   Hypothesis Box
+   ========================= */
+
+.hypothesis-box {
+    margin: 30px 0;
+
+    border: 1px solid var(--blue-border);
+    border-radius: var(--radius-medium);
+
+    overflow: hidden;
+}
+
+.hypothesis-box div {
+    display: grid;
+
+    grid-template-columns: 50px 1fr;
+
+    padding: 15px 20px;
+}
+
+.hypothesis-box div:first-child {
+    border-bottom: 1px solid var(--blue-border);
+}
+
+.hypothesis-box span {
+    color: var(--blue);
+
+    font-weight: 700;
+}
+
+
+/* =========================
+   Values
+   ========================= */
+
+.values {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 25px;
+
+    margin: 35px 0;
+}
+
+.value-box {
+    min-width: 150px;
+
+    padding: 18px 25px;
+
+    text-align: center;
+
+    background-color: var(--blue-light);
+
+    border-radius: var(--radius-medium);
+}
+
+.value-box span {
+    display: block;
+
+    color: var(--muted);
+
+    font-size: 0.85rem;
+}
+
+.value-box strong {
+    display: block;
+
+    color: var(--blue);
+
+    font-size: 1.5rem;
+}
+
+.comparison-symbol {
+    color: var(--blue);
+
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+
+/* =========================
+   Steps
+   ========================= */
+
+.step {
+    margin-top: 35px;
+    padding-top: 30px;
+
+    border-top: 1px solid var(--blue-border);
+}
+
+.step.locked {
+    opacity: 0.35;
+
+    pointer-events: none;
+}
+
+.section-label,
+.step-number {
+    color: var(--blue);
+
+    font-size: 0.85rem;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+}
+
+
+/* =========================
+   Choice Buttons
+   ========================= */
+
+.choice-group {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-top: 20px;
+}
+
+.choice-group button {
+    color: var(--blue);
+    background-color: var(--white);
+
+    border: 1px solid var(--blue-border);
+}
+
+.choice-group button:hover {
+    color: var(--blue-dark);
+
+    background-color: var(--blue-light);
+}
+
+.choice-group button.selected {
+    color: var(--white);
+    background-color: var(--blue);
+}
+
+
+/* =========================
+   Sentence Starter
+   ========================= */
+
+.sentence-starter {
+    margin: 20px 0 25px;
+    padding: 20px;
+
+    background-color: var(--blue-light);
+
+    border-left: 4px solid var(--blue);
+    border-radius: var(--radius-small);
+
+    font-size: 1.05rem;
+}
+
+.blank {
+    display: inline-block;
+
+    min-width: 140px;
+
+    margin: 0 5px;
+
+    border-bottom: 2px solid var(--blue);
+}
+
+
+/* =========================
+   Sample Conclusion
+   ========================= */
+
+.sample-conclusion {
+    display: none;
+
+    margin-top: 20px;
+    padding: 20px;
+
+    background-color: var(--green-light);
+
+    border-left: 4px solid var(--green);
+    border-radius: var(--radius-small);
+}
+
+.sample-conclusion.visible {
+    display: block;
+}
+
+
+/* =========================
+   Mobile
+   ========================= */
+
+@media (max-width: 700px) {
+
+    .values {
+        gap: 10px;
+    }
+
+    .value-box {
+        min-width: 110px;
+
+        padding: 15px;
+    }
+
+    .choice-group {
+        flex-direction: column;
+    }
+
+    .choice-group button {
+        width: 100%;
+    }
+
+}
