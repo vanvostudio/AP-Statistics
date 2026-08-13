@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Activity 1 | AP Statistics</title>
+
+    <link rel="stylesheet" href="/AP-Statistics/css/base.css">
+    <link rel="stylesheet" href="/AP-Statistics/css/layout.css">
+    <link rel="stylesheet" href="/AP-Statistics/css/components.css">
+    <link rel="stylesheet" href="/AP-Statistics/css/activities/card-flip.css">
+</head>
+
+
+<body>
+
+    <header>
+        <div class="container">
+
+            <nav>
+                <strong>AP Statistics</strong>
+
+                <a href="../index.html">
+                    Unit 2
+                </a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <main>
+
+        <section class="intro">
+
+            <div class="container">
+
+                <div class="activity-label">
+                    Interactive Activity: Topics 2.1, 2.2
+                </div>
+
+                  <h1>Two-Way Table Card Swap</h1>
+
+                <p class="description">
+                    Use each card to practice interpreting two-way tables
+                    and calculating probabilities.
+                </p>
+
+                <div class="instructions">
+                    <strong>How it works:</strong>
+                    Answer the question on the front of the card.
+                    Then flip the card to check your answer.
+                    Switch cards and repeat.
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="activity">
+
+            <div class="container">
+
+                <div class="progress">
+                    Card <span id="cardNumber">1</span>
+                    of <span id="cardTotal">5</span>
+                </div>
+
+
+                <div class="card-area">
+
+                    <div id="quizCard" class="quiz-card">
+
+                        <div class="card-inner">
+
+
+                            <!-- FRONT -->
+
+                            <div class="card-face card-front">
+
+                                <div class="card-label">
+                                    Question
+                                </div>
+
+                                <h2 id="questionTitle">
+                                    Two-Way Table
+                                </h2>
+
+
+                                <div id="tableContainer"></div>
+
+
+                                <p
+                                    id="questionText"
+                                    class="question-text"
+                                ></p>
+
+
+                                <label for="studentAnswer">
+                                    Your answer
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="studentAnswer"
+                                    placeholder="Enter your answer"
+                                    autocomplete="off"
+                                >
+
+
+                                <button id="flipButton">
+                                    Flip Card
+                                </button>
+
+                            </div>
+
+
+                            <!-- BACK -->
+
+                            <div class="card-face card-back">
+
+                                <div class="card-label">
+                                    Answer
+                                </div>
+
+                                <h2>Check Your Reasoning</h2>
+
+
+                                <div
+                                    id="answerDisplay"
+                                    class="answer-display"
+                                ></div>
+
+
+                                <div
+                                    id="explanation"
+                                    class="explanation"
+                                ></div>
+
+
+                                <button id="flipBackButton">
+                                    View Question
+                                </button>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="controls">
+
+                    <button
+                        id="newCardButton"
+                        class="primary-button"
+                    >
+                        Switch Card →
+                    </button>
+
+                    <button
+                        id="resetButton"
+                        class="secondary-button"
+                    >
+                        Restart
+                    </button>
+
+                </div>
+
+
+                <div class="reflection">
+
+                    <h2>Keep Track of What You're Practicing</h2>
+
+                    <p>
+                        Before switching cards, identify what type of
+                        probability the question required.
+                    </p>
+
+                    <div class="skill-buttons">
+
+                        <button
+                            class="skill-button"
+                            data-skill="joint"
+                        >
+                            Joint
+                        </button>
+
+                        <button
+                            class="skill-button"
+                            data-skill="marginal"
+                        >
+                            Marginal
+                        </button>
+
+                        <button
+                            class="skill-button"
+                            data-skill="conditional"
+                        >
+                            Conditional
+                        </button>
+
+                        <button
+                            class="skill-button"
+                            data-skill="comparison"
+                        >
+                            Compare Groups
+                        </button>
+
+                    </div>
+
+                    <p
+                        id="skillFeedback"
+                        class="skill-feedback"
+                    ></p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <div class="container">
+            <p>© 2026 Van Vo</p>
+        </div>
+    </footer>
+
+
+    <script src="script.js?v=1"></script>
+
+</body>
+
+</html>
