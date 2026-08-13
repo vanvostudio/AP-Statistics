@@ -1,0 +1,380 @@
+/* =========================
+   AP Statistics
+   Components
+   ========================= */
+
+
+/* =========================
+   Navigation Elements
+   ========================= */
+
+nav strong {
+    color: var(--blue);
+
+    font-size: 1.15rem;
+}
+
+nav a {
+    color: var(--blue);
+
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: var(--blue-dark);
+}
+
+
+/* =========================
+   Activity Labels
+   ========================= */
+
+.activity-label {
+    color: var(--blue);
+
+    font-size: 0.9rem;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+
+/* =========================
+   Descriptions
+   ========================= */
+
+.description {
+    max-width: 750px;
+
+    color: var(--muted);
+
+    font-size: 1.2rem;
+}
+
+.section-description {
+    color: var(--muted);
+}
+
+
+/* =========================
+   Highlighted Question
+   ========================= */
+
+.question {
+    max-width: 750px;
+
+    margin-top: 25px;
+    padding: 18px 20px;
+
+    background-color: var(--white);
+
+    border-left: 4px solid var(--blue);
+    border-radius: var(--radius-small);
+}
+
+
+/* =========================
+   Buttons
+   ========================= */
+
+button {
+    padding: 12px 22px;
+
+    color: var(--white);
+    background-color: var(--blue);
+
+    border: none;
+    border-radius: var(--radius-small);
+
+    font-size: 1rem;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    text-align: center;
+
+    transition:
+        background-color 0.2s,
+        transform 0.15s,
+        box-shadow 0.2s;
+}
+
+button:hover {
+    background-color: var(--blue-dark);
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 5px 14px rgba(2, 119, 201, 0.2);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+.secondary-button {
+    color: var(--blue);
+
+    background-color: var(--white);
+
+    border: 1px solid var(--blue-border);
+}
+
+.secondary-button:hover {
+    color: var(--blue-dark);
+
+    background-color: var(--blue-light);
+}
+
+
+/* =========================
+   Select Menus
+   ========================= */
+
+select {
+    padding: 12px 40px 12px 14px;
+
+    color: var(--text);
+    background-color: var(--white);
+
+    border: 1px solid var(--blue-border);
+    border-radius: var(--radius-small);
+
+    font-size: 1rem;
+
+    cursor: pointer;
+}
+
+select:focus {
+    outline: none;
+
+    border-color: var(--blue);
+
+    box-shadow:
+        0 0 0 3px rgba(2, 119, 201, 0.1);
+}
+
+
+/* =========================
+   Text Inputs
+   ========================= */
+
+textarea {
+    display: block;
+
+    width: 100%;
+    min-height: 120px;
+
+    padding: 16px;
+
+    color: var(--text);
+    background-color: var(--white);
+
+    border: 1px solid var(--blue-border);
+    border-radius: var(--radius-medium);
+
+    font-size: 1rem;
+    line-height: 1.5;
+
+    resize: vertical;
+
+    transition:
+        border-color 0.2s,
+        box-shadow 0.2s;
+}
+
+textarea:focus {
+    outline: none;
+
+    border-color: var(--blue);
+
+    box-shadow:
+        0 0 0 3px rgba(2, 119, 201, 0.1);
+}
+
+
+/* =========================
+   Labels
+   ========================= */
+
+label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-weight: 600;
+}
+
+
+/* =========================
+   Unit Cards
+   ========================= */
+
+.unit-card {
+    display: block;
+
+    margin-bottom: 20px;
+    padding: 30px;
+
+    color: var(--text);
+    background-color: var(--white);
+
+    border: 1px solid var(--blue-border);
+    border-left: 5px solid var(--blue);
+    border-radius: var(--radius-large);
+
+    text-decoration: none;
+
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s,
+        border-color 0.2s;
+}
+
+.unit-card:hover {
+    transform: translateY(-3px);
+
+    border-color: var(--blue);
+
+    box-shadow: var(--shadow-blue);
+}
+
+.unit-number {
+    color: var(--blue);
+
+    font-size: 0.9rem;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.unit-card h3 {
+    margin: 8px 0;
+
+    font-size: 1.5rem;
+}
+
+.unit-card p {
+    margin-bottom: 0;
+}
+
+
+/* =========================
+   Output Box
+   ========================= */
+
+#output {
+    min-height: 180px;
+
+    margin-top: 35px;
+    padding: 30px;
+
+    background-color: var(--white);
+
+    border: 1px solid var(--blue-border);
+    border-left: 5px solid var(--blue);
+    border-radius: var(--radius-large);
+
+    box-shadow: var(--shadow-small);
+
+    text-align: center;
+}
+
+#output:empty {
+    display: none;
+}
+
+#output p:first-child {
+    margin-top: 0;
+
+    color: var(--blue);
+
+    font-weight: 600;
+}
+
+
+/* =========================
+   Feedback
+   ========================= */
+
+.feedback {
+    min-height: 25px;
+
+    margin-top: 10px;
+
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.correct {
+    border-color: var(--green);
+
+    background-color: var(--green-light);
+}
+
+.correct .feedback {
+    color: var(--green);
+}
+
+.incorrect {
+    border-color: var(--red);
+
+    background-color: var(--red-light);
+}
+
+.incorrect .feedback {
+    color: var(--red);
+}
+
+
+/* =========================
+   Score
+   ========================= */
+
+.score {
+    margin-top: 25px;
+
+    color: var(--blue);
+
+    font-size: 1.1rem;
+    font-weight: 700;
+
+    text-align: center;
+}
+
+
+/* =========================
+   Coming Soon
+   ========================= */
+
+.coming-soon {
+    opacity: 0.55;
+
+    border-left-color: #aaa;
+}
+
+.coming-soon .unit-number {
+    color: #777;
+}
+
+
+/* =========================
+   Mobile Components
+   ========================= */
+
+@media (max-width: 600px) {
+
+    select,
+    button {
+        width: 100%;
+    }
+
+    select {
+        margin-bottom: 12px;
+    }
+
+}

@@ -1,0 +1,117 @@
+/* =========================
+   AP Statistics
+   Stem-and-Leaf Plot Activity
+   ========================= */
+
+
+/* =========================
+   Stem Plot
+   ========================= */
+
+.stem-plot {
+    display: inline-block;
+
+    margin: 25px auto;
+    padding: 25px 35px;
+
+    background-color: var(--background);
+
+    border: 1px solid var(--blue-border);
+    border-radius: var(--radius-medium);
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 1.2rem;
+
+    text-align: left;
+}
+
+
+/* =========================
+   Stem Rows
+   ========================= */
+
+.stem-row {
+    display: grid;
+
+    grid-template-columns:
+        40px
+        25px
+        auto;
+
+    padding: 5px 0;
+}
+
+
+/* =========================
+   Stems
+   ========================= */
+
+.stem {
+    color: var(--blue);
+
+    font-weight: 700;
+
+    text-align: right;
+}
+
+
+/* =========================
+   Divider
+   ========================= */
+
+.stem-divider {
+    font-weight: 700;
+
+    text-align: center;
+}
+
+
+/* =========================
+   Leaves
+   ========================= */
+
+.leaves {
+    text-align: left;
+}
+
+
+/* =========================
+   Key
+   ========================= */
+
+.key {
+    margin-top: 15px;
+
+    color: var(--muted);
+
+    font-size: 0.95rem;
+}
+
+
+/* =========================
+   Mobile
+   ========================= */
+
+@media (max-width: 600px) {
+
+    .stem-plot {
+        width: 100%;
+
+        padding: 20px;
+
+        font-size: 1rem;
+
+        overflow-x: auto;
+    }
+
+    .stem-row {
+        grid-template-columns:
+            35px
+            20px
+            auto;
+    }
+
+}
