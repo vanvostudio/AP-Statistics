@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Activity 5 | AP Statistics</title>
+
+    <link rel="stylesheet" href="https://vanvostudio.github.io/css/base.css">
+    <link rel="stylesheet" href="https://vanvostudio.github.io/css/layout.css">
+    <link rel="stylesheet" href="https://vanvostudio.github.io/css/components.css">
+    <link rel="stylesheet" href="/AP-Statistics/css/activities/graphic-organizer.css">
+</head>
+
+
+<body>
+
+    <header>
+        <div class="container">
+
+            <nav>
+                <strong>AP Statistics</strong>
+
+                <a href="../index.html">
+                    Unit 4
+                </a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <main>
+
+        <section class="intro">
+
+            <div class="container">
+
+                <div class="activity-label">
+                    Interactive Activity: Topics 4.2
+                </div>
+
+            <h1>Build an Inference Flowchart</h1>
+
+            <p class="description">
+                Work with your team to develop a decision process for
+                determining which inference procedure to use in a given setting.
+            </p>
+
+            <div class="instructions">
+
+                <strong>Your goal:</strong>
+
+                <p>
+                    Arrange the questions and procedures below into a logical
+                    decision-making flowchart.
+                </p>
+
+                <p>
+                    Your flowchart should help someone choose a procedure
+                    without already knowing the answer.
+                </p>
+
+            </div>
+
+            </div>
+
+        </section>
+
+    <section class="activity">
+
+        <div class="container">
+
+            <!-- CARD BANK -->
+
+            <section class="card-bank-section">
+
+                <h2>Decision Cards</h2>
+
+                <p>
+                    Drag the cards into the flowchart workspace.
+                </p>
+
+                <div id="cardBank" class="card-bank"></div>
+
+            </section>
+
+
+            <!-- WORKSPACE -->
+
+            <section class="workspace-section">
+
+                <div class="workspace-header">
+
+                    <div>
+                        <h2>Your Flowchart</h2>
+
+                        <p>
+                            Arrange the cards in the order your team thinks
+                            makes the most sense.
+                        </p>
+                    </div>
+
+                    <button
+                        id="resetButton"
+                        class="secondary-button"
+                    >
+                        Reset
+                    </button>
+
+                </div>
+
+
+                <div id="workspace" class="workspace">
+
+                    <div class="drop-zone" data-position="1"></div>
+                    <div class="arrow">↓</div>
+
+                    <div class="drop-zone" data-position="2"></div>
+                    <div class="arrow">↓</div>
+
+                    <div class="drop-zone" data-position="3"></div>
+                    <div class="arrow">↓</div>
+
+                    <div class="drop-zone" data-position="4"></div>
+                    <div class="arrow">↓</div>
+
+                    <div class="drop-zone" data-position="5"></div>
+                    <div class="arrow">↓</div>
+
+                    <div class="drop-zone" data-position="6"></div>
+
+                </div>
+
+            </section>
+
+
+            <!-- EXPLANATION -->
+
+            <section class="reflection">
+
+                <h2>Explain Your Design</h2>
+
+                <label for="teamExplanation">
+                    Why did your team arrange the decisions in this order?
+                </label>
+
+                <textarea
+                    id="teamExplanation"
+                    placeholder="We started with..."
+                ></textarea>
+
+
+                <label for="importantDecision">
+                    Which decision in your flowchart is most important?
+                </label>
+
+                <textarea
+                    id="importantDecision"
+                    placeholder="We think the most important question is..."
+                ></textarea>
+
+
+                <button id="compareButton">
+                    Compare With Suggested Flowchart
+                </button>
+
+            </section>
+
+
+            <!-- SUGGESTED FLOWCHART -->
+
+            <section
+                id="suggestedSection"
+                class="suggested-section"
+            >
+
+                <h2>One Possible Flowchart</h2>
+
+                <p>
+                    There are several reasonable ways to organize the decisions.
+                    Compare this structure with your team's version.
+                </p>
+
+                <div class="suggested-flowchart">
+
+                    <div class="flow-node start">
+                        What is the goal?
+                    </div>
+
+                    <div class="flow-branches">
+
+                        <div class="branch">
+
+                            <div class="branch-label">
+                                Estimate
+                            </div>
+
+                            <div class="flow-node">
+                                Confidence Interval
+                            </div>
+
+                        </div>
+
+
+                        <div class="branch">
+
+                            <div class="branch-label">
+                                Test a claim
+                            </div>
+
+                            <div class="flow-node">
+                                Significance Test
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="arrow">↓</div>
+
+
+                    <div class="flow-node">
+                        What type of variable or parameter?
+                    </div>
+
+
+                    <div class="flow-branches">
+
+                        <div class="branch">
+
+                            <div class="branch-label">
+                                Quantitative
+                            </div>
+
+                            <div class="flow-node">
+                                Mean
+                            </div>
+
+                        </div>
+
+
+                        <div class="branch">
+
+                            <div class="branch-label">
+                                Categorical
+                            </div>
+
+                            <div class="flow-node">
+                                Proportion / Distribution
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="arrow">↓</div>
+
+
+                    <div class="flow-node">
+                        How many groups or samples?
+                    </div>
+
+
+                    <div class="procedure-grid">
+
+                        <div class="procedure-box">
+                            <strong>1 Mean</strong>
+                            <span>One-sample t procedure</span>
+                        </div>
+
+                        <div class="procedure-box">
+                            <strong>2 Means</strong>
+                            <span>Two-sample t procedure</span>
+                        </div>
+
+                        <div class="procedure-box">
+                            <strong>1 Proportion</strong>
+                            <span>One-proportion z procedure</span>
+                        </div>
+
+                        <div class="procedure-box">
+                            <strong>2 Proportions</strong>
+                            <span>Two-proportion z procedure</span>
+                        </div>
+
+                        <div class="procedure-box">
+                            <strong>One Categorical Distribution</strong>
+                            <span>Chi-square goodness-of-fit</span>
+                        </div>
+
+                        <div class="procedure-box">
+                            <strong>Multiple Groups</strong>
+                            <span>Chi-square homogeneity</span>
+                        </div>
+
+                        <div class="procedure-box">
+                            <strong>Two Categorical Variables</strong>
+                            <span>Chi-square independence</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <label for="comparisonResponse">
+                    What would you change about your team's flowchart?
+                </label>
+
+                <textarea
+                    id="comparisonResponse"
+                    placeholder="After comparing, we would..."
+                ></textarea>
+
+            </section>
+
+        </div>
+
+    </section>
+
+    </main>
+
+
+    <footer>
+        <div class="container">
+            <p>© 2026 Van Vo</p>
+        </div>
+    </footer>
+
+
+    <script src="script.js?v=1"></script>
+
+</body>
+
+</html>

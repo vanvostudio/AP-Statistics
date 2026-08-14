@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Activity 4 | AP Statistics</title>
+
+    <link rel="stylesheet" href="https://vanvostudio.github.io/css/base.css">
+    <link rel="stylesheet" href="https://vanvostudio.github.io/css/layout.css">
+    <link rel="stylesheet" href="https://vanvostudio.github.io/css/components.css">
+    <link rel="stylesheet" href="/AP-Statistics/css/activities/round-table.css">
+</head>
+
+
+<body>
+
+    <header>
+        <div class="container">
+
+            <nav>
+                <strong>AP Statistics</strong>
+
+                <a href="../index.html">
+                    Unit 4
+                </a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <main>
+
+        <section class="intro">
+
+            <div class="container">
+
+                <div class="activity-label">
+                    Interactive Activity: Topics 4.2, 4.3, 4.4, 4.5, 4.7, 4.8, 4.9, 4.10
+                </div>
+
+            <h1>Rotate & Review</h1>
+
+            <p class="description">
+                Complete one inference problem, pass the paper clockwise,
+                review the previous response, and then complete the next problem.
+            </p>
+
+            <div class="instructions">
+
+                <strong>How it works:</strong>
+
+                <p>
+                    Each round, review the work already on the paper before
+                    completing the next problem.
+                </p>
+
+                <p>
+                    After four rounds, the original paper returns to its owner
+                    with feedback from the group.
+                </p>
+
+            </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="activity">
+
+            <div class="container">
+
+                <div class="status-bar">
+
+                    <div>
+                        Round
+                        <strong id="roundNumber">1</strong>
+                        of 4
+                    </div>
+
+                    <div>
+                        Current Student:
+                        <strong id="studentName">Student A</strong>
+                    </div>
+
+                    <div>
+                        Paper Owner:
+                        <strong id="paperOwner">Student A</strong>
+                    </div>
+
+                </div>
+
+
+                <section class="problem-card">
+
+                    <div class="problem-label">
+                        Problem
+                        <span id="problemNumber">1</span>
+                    </div>
+
+                    <h2 id="problemTitle"></h2>
+
+                    <p
+                        id="problemText"
+                        class="problem-text"
+                    ></p>
+
+
+                    <div
+                        id="previousWorkSection"
+                        class="previous-work hidden"
+                    >
+
+                        <h3>Review Previous Work</h3>
+
+                        <div
+                            id="previousResponse"
+                            class="response-preview"
+                        ></div>
+
+
+                        <label for="reviewResponse">
+                            What is correct, incomplete, or needs revision?
+                        </label>
+
+                        <textarea
+                            id="reviewResponse"
+                            placeholder="The previous response..."
+                        ></textarea>
+
+                    </div>
+
+
+                    <div class="current-work">
+
+                        <h3>Complete This Problem</h3>
+
+                        <label for="studentResponse">
+                            Your response
+                        </label>
+
+                        <textarea
+                            id="studentResponse"
+                            placeholder="Show your reasoning and conclusion..."
+                        ></textarea>
+
+                    </div>
+
+
+                    <div class="controls">
+
+                        <button id="submitRound">
+                            Finish Round & Pass Paper →
+                        </button>
+
+                    </div>
+
+
+                    <div
+                        id="feedback"
+                        class="feedback"
+                    ></div>
+
+                </section>
+
+
+                <section
+                    id="finalSection"
+                    class="final-section hidden"
+                >
+
+                    <h2>Paper Returned</h2>
+
+                    <p>
+                        The paper has returned to its original owner.
+                        Review the completed work and group feedback.
+                    </p>
+
+                    <div id="finalSummary"></div>
+
+                    <button id="restartActivity">
+                        Restart Activity
+                    </button>
+
+                </section>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <div class="container">
+            <p>© 2026 Van Vo</p>
+        </div>
+    </footer>
+
+
+    <script src="script.js?v=1"></script>
+
+</body>
+
+</html>

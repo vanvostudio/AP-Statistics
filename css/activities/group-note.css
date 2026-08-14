@@ -1,0 +1,108 @@
+/* Group Note */
+
+.group-note {
+    margin-bottom: 30px;
+    padding: 16px 20px;
+
+    color: var(--blue);
+    background-color: var(--blue-light);
+
+    border-radius: 8px;
+
+    font-weight: 600;
+}
+
+
+/* Condition Cards */
+
+.condition-card {
+    margin-bottom: 25px;
+    padding: 30px;
+
+    background-color: var(--white);
+
+    border: 1px solid var(--blue-border);
+    border-left: 5px solid var(--blue);
+    border-radius: 10px;
+}
+
+.condition-number {
+    color: var(--blue);
+
+    font-size: 0.85rem;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.condition-card h2 {
+    margin: 5px 0 20px;
+
+    color: var(--blue);
+}
+
+
+/* Sample Answer */
+
+.sample-answer {
+    display: none;
+
+    margin-top: 25px;
+    padding: 20px;
+
+    background-color: var(--green-light);
+
+    border-left: 4px solid var(--green);
+    border-radius: 6px;
+}
+
+.sample-answer.visible {
+    display: block;
+}
+
+.sample-answer h3 {
+    margin-top: 0;
+
+    color: var(--green);
+}
+
+.sample-answer p {
+    margin: 8px 0;
+}
+
+
+/* Reveal Button */
+
+.reveal-condition {
+    margin-top: 20px;
+}
+
+
+/* Compare Groups */
+
+.comparison-section {
+    display: none;
+
+    margin-top: 60px;
+    padding-top: 35px;
+
+    border-top: 1px solid var(--blue-border);
+}
+
+.comparison-section.visible {
+    display: block;
+}
+
+.comparison-section h2 {
+    color: var(--blue);
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+    .condition-card {
+        padding: 22px;
+    }
+}

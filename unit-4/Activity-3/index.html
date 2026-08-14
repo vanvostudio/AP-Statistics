@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Activity 3 | AP Statistics</title>
+
+    <link rel="stylesheet" href="https://vanvostudio.github.io/css/base.css">
+    <link rel="stylesheet" href="https://vanvostudio.github.io/css/layout.css">
+    <link rel="stylesheet" href="https://vanvostudio.github.io/css/components.css">
+    <link rel="stylesheet" href="/AP-Statistics/css/activities/procedure-selection.css">
+</head>
+
+
+<body>
+
+    <header>
+        <div class="container">
+
+            <nav>
+                <strong>AP Statistics</strong>
+
+                <a href="../index.html">
+                    Unit 4
+                </a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <main>
+
+        <section class="intro">
+
+            <div class="container">
+
+                <div class="activity-label">
+                    Interactive Activity: Topics 4.2, 4.4, 4.7, 4.9
+                </div>
+
+                <h1>Which Statistical Procedure Should I Use?</h1>
+
+                <p class="description">
+                    Identify the clues in each statistical situation and use them
+                    to determine the appropriate inference procedure.
+                </p>
+
+                <div class="instructions">
+
+                    <strong>Look for clues:</strong>
+
+                    <p>
+                        Is the question asking for a significance test
+                        or a confidence interval?
+                    </p>
+
+                    <p>
+                        Does the problem involve means or proportions?
+                    </p>
+
+                    <p>
+                        Is there one population, two populations,
+                        or multiple categorical variables?
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <section class="activity">
+
+            <div class="container">
+
+                <div class="activity-header">
+
+                    <div class="progress">
+                        Situation
+                        <span id="problemNumber">1</span>
+                        of
+                        <span id="problemTotal">8</span>
+                    </div>
+
+                </div>
+
+
+                <div class="problem-card">
+
+                    <div class="section-label">
+                        Statistical Situation
+                    </div>
+
+
+                    <p
+                        id="scenario"
+                        class="scenario"
+                    ></p>
+
+
+                    <div class="highlight-box">
+
+                        <h2>1. Identify the Clues</h2>
+
+                        <p>
+                            Click the phrases that helped you decide
+                            which procedure to use.
+                        </p>
+
+                        <div
+                            id="phraseContainer"
+                            class="phrase-container"
+                        ></div>
+
+                    </div>
+
+
+                    <div class="classification">
+
+                        <h2>2. Classify the Problem</h2>
+
+
+                        <div class="classification-grid">
+
+                            <div class="classification-item">
+
+                                <label for="inferenceType">
+                                    What is the goal?
+                                </label>
+
+                                <select id="inferenceType">
+
+                                    <option value="">
+                                        Select
+                                    </option>
+
+                                    <option value="test">
+                                        Significance Test
+                                    </option>
+
+                                    <option value="interval">
+                                        Confidence Interval
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="classification-item">
+
+                                <label for="variableType">
+                                    What type of parameter?
+                                </label>
+
+                                <select id="variableType">
+
+                                    <option value="">
+                                        Select
+                                    </option>
+
+                                    <option value="mean">
+                                        Mean
+                                    </option>
+
+                                    <option value="proportion">
+                                        Proportion
+                                    </option>
+
+                                    <option value="categorical">
+                                        Categorical Distribution / Association
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="classification-item">
+
+                                <label for="groups">
+                                    How many groups or variables?
+                                </label>
+
+                                <select id="groups">
+
+                                    <option value="">
+                                        Select
+                                    </option>
+
+                                    <option value="one">
+                                        One
+                                    </option>
+
+                                    <option value="two">
+                                        Two
+                                    </option>
+
+                                    <option value="multiple">
+                                        Two or More Categorical Variables / Groups
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="procedure-section">
+
+                        <h2>3. Choose the Procedure</h2>
+
+                        <select id="procedure">
+
+                            <option value="">
+                                Select a statistical procedure
+                            </option>
+
+                            <option value="one-proportion-test">
+                                One-Proportion z-Test
+                            </option>
+
+                            <option value="one-proportion-interval">
+                                One-Proportion z-Interval
+                            </option>
+
+                            <option value="two-proportion-test">
+                                Two-Proportion z-Test
+                            </option>
+
+                            <option value="two-proportion-interval">
+                                Two-Proportion z-Interval
+                            </option>
+
+                            <option value="one-mean-test">
+                                One-Sample t-Test for a Mean
+                            </option>
+
+                            <option value="one-mean-interval">
+                                One-Sample t-Interval for a Mean
+                            </option>
+
+                            <option value="two-mean-test">
+                                Two-Sample t-Test for a Difference in Means
+                            </option>
+
+                            <option value="two-mean-interval">
+                                Two-Sample t-Interval for a Difference in Means
+                            </option>
+
+                            <option value="chi-independence">
+                                Chi-Square Test for Independence
+                            </option>
+
+                            <option value="chi-homogeneity">
+                                Chi-Square Test for Homogeneity
+                            </option>
+
+                            <option value="chi-gof">
+                                Chi-Square Goodness-of-Fit Test
+                            </option>
+
+                        </select>
+
+
+                        <button id="checkAnswer">
+                            Check Procedure
+                        </button>
+
+
+                        <div
+                            id="feedback"
+                            class="feedback"
+                        ></div>
+
+
+                        <div
+                            id="explanation"
+                            class="explanation"
+                        ></div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="navigation">
+
+                    <button
+                        id="previousProblem"
+                        class="secondary-button"
+                    >
+                        ← Previous
+                    </button>
+
+                    <button id="nextProblem">
+                        Next Situation →
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <div class="container">
+            <p>© 2026 Van Vo</p>
+        </div>
+    </footer>
+
+
+    <script src="script.js?v=1"></script>
+
+</body>
+
+</html>

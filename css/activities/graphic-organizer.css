@@ -1,0 +1,309 @@
+/* Instructions */
+
+.instructions {
+    max-width: 760px;
+
+    margin-top: 25px;
+    padding: 18px 20px;
+
+    background-color: var(--white);
+
+    border-left: 4px solid var(--blue);
+    border-radius: 6px;
+}
+
+.instructions p {
+    margin: 5px 0;
+}
+
+
+/* Card Bank */
+
+.card-bank-section {
+    margin-bottom: 5px;
+}
+
+.card-bank {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 5px;
+
+    margin-top: 5px;
+}
+
+.flow-card {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 5px;
+
+    color: var(--text);
+    background-color: var(--white);
+
+    border:
+        1px solid var(--blue-border);
+
+    border-top:
+        4px solid var(--blue);
+
+    border-radius: 8px;
+
+    text-align: center;
+
+    font-weight: 600;
+
+    cursor: grab;
+
+    transition:
+        transform 0.15s,
+        box-shadow 0.15s;
+}
+
+.flow-card:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 6px 16px
+        rgba(2, 119, 201, 0.1);
+}
+
+.flow-card:active {
+    cursor: grabbing;
+}
+
+
+/* Workspace */
+
+.workspace-section {
+    margin-top: 40px;
+}
+
+.workspace-header {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: flex-end;
+
+    gap: 20px;
+}
+
+.workspace-header p {
+    color: var(--muted);
+}
+
+.workspace {
+    max-width: 650px;
+
+    margin: 30px auto;
+}
+
+.drop-zone {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 60px;
+
+    padding: 5px;
+
+    background-color: var(--white);
+
+    border:
+        2px dashed var(--blue-border);
+
+    border-radius: 10px;
+
+    transition:
+        border-color 0.2s,
+        background-color 0.2s;
+}
+
+.drop-zone::before {
+    content: "Drop a decision card here";
+
+    color: #a2a9ae;
+
+    font-size: 0.9rem;
+}
+
+.drop-zone:has(.flow-card)::before {
+    display: none;
+}
+
+.drop-zone.drag-over {
+    background-color: var(--blue-light);
+
+    border-color: var(--blue);
+}
+
+.drop-zone .flow-card {
+    width: 100%;
+
+    cursor: grab;
+}
+
+.arrow {
+    margin: 8px 0;
+
+    color: var(--blue);
+
+    text-align: center;
+
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+
+/* Reflection */
+
+.reflection {
+    padding-top: 35px;
+
+    border-top:
+        1px solid var(--blue-border);
+}
+
+.reflection label {
+    margin-top: 25px;
+}
+
+.reflection button {
+    margin-top: 25px;
+}
+
+
+/* Suggested Flowchart */
+
+.suggested-section {
+    display: none;
+
+    margin-top: 70px;
+    padding-top: 5px;
+
+    border-top:
+        1px solid var(--blue-border);
+}
+
+.suggested-section.visible {
+    display: block;
+}
+
+.suggested-flowchart {
+    max-width: 850px;
+
+    margin: 35px auto;
+}
+
+.flow-node {
+    max-width: 500px;
+
+    margin: 0 auto;
+    padding: 5px;
+
+    text-align: center;
+
+    background-color: var(--white);
+
+    border:
+        2px solid var(--blue);
+
+    border-radius: 9px;
+
+    font-weight: 700;
+}
+
+.flow-node.start {
+    color: var(--white);
+    background-color: var(--blue);
+}
+
+.flow-branches {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 20px;
+
+    margin: 25px 0;
+}
+
+.branch {
+    text-align: center;
+}
+
+.branch-label {
+    display: inline-block;
+
+    margin-bottom: 8px;
+
+    padding: 5px 5px;
+
+    color: var(--blue);
+
+    background-color: var(--blue-light);
+
+    border-radius: 15px;
+
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+
+/* Procedure Grid */
+
+.procedure-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 12px;
+
+    margin-top: 30px;
+}
+
+.procedure-box {
+    padding: 18px;
+
+    background-color: var(--green-light);
+
+    border-left:
+        4px solid var(--green);
+
+    border-radius: 7px;
+}
+
+.procedure-box strong {
+    display: block;
+
+    color: var(--green);
+}
+
+.procedure-box span {
+    color: var(--muted);
+}
+
+
+/* Mobile */
+
+@media (max-width: 750px) {
+
+    .card-bank,
+    .flow-branches,
+    .procedure-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .workspace-header {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+}

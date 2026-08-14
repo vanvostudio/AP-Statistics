@@ -1,0 +1,243 @@
+/* =========================
+   Timed Writing Activity
+   ========================= */
+
+
+/* =========================
+   Activity Header
+   ========================= */
+
+.activity-header {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+.progress {
+    color: var(--muted);
+
+    font-weight: 600;
+}
+
+.difficulty {
+    padding: 6px 13px;
+
+    color: var(--blue);
+    background-color: var(--blue-light);
+
+    border-radius: 20px;
+
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+
+/* =========================
+   Prompt Card
+   ========================= */
+
+.prompt-card {
+    padding: 35px;
+
+    background-color: var(--white);
+
+    border: 1px solid var(--blue-border);
+    border-top: 5px solid var(--blue);
+    border-radius: 12px;
+
+    box-shadow:
+        0 8px 24px rgba(2, 119, 201, 0.08);
+}
+
+.prompt-label {
+    color: var(--blue);
+
+    font-size: 0.85rem;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+}
+
+.prompt-card h2 {
+    max-width: 760px;
+
+    margin: 8px 0 35px;
+
+    color: var(--text);
+
+    font-size: 1.7rem;
+}
+
+
+/* =========================
+   Timer
+   ========================= */
+
+.timer-area {
+    padding: 25px;
+
+    text-align: center;
+
+    background-color: var(--blue-light);
+
+    border-radius: 10px;
+}
+
+.timer-label {
+    color: var(--muted);
+
+    font-size: 0.85rem;
+    font-weight: 600;
+
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.timer {
+    margin: 5px 0 15px;
+
+    color: var(--blue);
+
+    font-size: 3rem;
+    font-weight: 700;
+
+    font-variant-numeric: tabular-nums;
+}
+
+.timer.finished {
+    color: var(--green);
+}
+
+
+/* =========================
+   Writing
+   ========================= */
+
+.writing-area {
+    margin-top: 30px;
+}
+
+.writing-area.locked {
+    opacity: 0.4;
+
+    pointer-events: none;
+}
+
+.writing-area textarea {
+    min-height: 220px;
+}
+
+.word-count {
+    margin-top: 7px;
+
+    color: var(--muted);
+
+    text-align: right;
+
+    font-size: 0.9rem;
+}
+
+
+/* =========================
+   Timer Message
+   ========================= */
+
+.time-message {
+    min-height: 30px;
+
+    margin-top: 15px;
+
+    color: var(--green);
+
+    text-align: center;
+
+    font-weight: 600;
+}
+
+
+/* =========================
+   Controls
+   ========================= */
+
+button:disabled {
+    opacity: 0.4;
+
+    cursor: not-allowed;
+}
+
+.secondary-button:hover:not(:disabled) {
+    background-color: var(--blue-light);
+}
+
+
+/* =========================
+   Sample Response
+   ========================= */
+
+.sample-response {
+    display: none;
+
+    margin-top: 25px;
+    padding: 22px;
+
+    background-color: var(--green-light);
+
+    border-left: 4px solid var(--green);
+
+    border-radius: 6px;
+}
+
+.sample-response.visible {
+    display: block;
+}
+
+.sample-response ol {
+    padding-left: 25px;
+}
+
+
+/* =========================
+   Navigation
+   ========================= */
+
+.navigation {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-top: 30px;
+}
+
+
+/* =========================
+   Mobile
+   ========================= */
+
+@media (max-width: 700px) {
+
+    .activity-header {
+        align-items: flex-start;
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+    .prompt-card {
+        padding: 24px;
+    }
+
+    .navigation {
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+    .navigation button {
+        width: 100%;
+    }
+
+}

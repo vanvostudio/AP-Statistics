@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Activity 1 | AP Statistics</title>
-    
+
     <link rel="stylesheet" href="https://vanvostudio.github.io/css/base.css">
     <link rel="stylesheet" href="https://vanvostudio.github.io/css/layout.css">
     <link rel="stylesheet" href="https://vanvostudio.github.io/css/components.css">
+    <link rel="stylesheet" href="/AP-Statistics/css/activities/timed-writing.css">
 </head>
 
 
@@ -21,8 +22,8 @@
             <nav>
                 <strong>AP Statistics</strong>
 
-                <a href="../../">
-                    Unit 1
+                <a href="../index.html">
+                    Unit 4
                 </a>
             </nav>
 
@@ -37,18 +38,22 @@
             <div class="container">
 
                 <div class="activity-label">
-                    Interactive Activity: Topic 1.5
+                    Interactive Activity: Topics 4.1
                 </div>
 
-                <h1>Which Graph Should I Use? </h1>
+                <h1>Explain It From Memory</h1>
 
                 <p class="description">
-                    Enter commute times in minutes, separated by commas.
+                    Use what you know to respond to the prompt before
+                    looking at an example response.
                 </p>
-                
-                <textarea id="dataInput">
-                  8, 12, 15, 10, 22, 18, 12, 25, 15, 14
-                </textarea>
+
+                <div class="instructions">
+                    <strong>Your task:</strong>
+                    When you are ready, start the timer and write as much
+                    as you can from memory. Focus on the important steps
+                    and ideas rather than perfect wording.
+                </div>
 
             </div>
 
@@ -56,24 +61,119 @@
 
 
         <section class="activity">
-          <div class="controls">
 
-            <select id="graphType">
+            <div class="container">
 
-              <option value="dotplot">Dotplot</option>
-              <option value="histogram">Histogram</option>
-              <option value="boxplot">Boxplot</option>
-              <option value="stemplot">Stem-and-Leaf Plot</option>
+                <div class="activity-header">
 
-            </select>
+                    <div class="progress">
+                        Prompt
+                        <span id="promptNumber">1</span>
+                        of
+                        <span id="promptTotal">5</span>
+                    </div>
 
-            <button id="makeGraph">
-              Create Graph
-            </button>
-          </div>
-          <div class="container">
-            <div id="output"></div>
-          </div>
+                    <div
+                        id="difficulty"
+                        class="difficulty"
+                    ></div>
+
+                </div>
+
+
+                <div class="prompt-card">
+
+                    <div class="prompt-label">
+                        Prompt
+                    </div>
+
+                    <h2 id="promptText"></h2>
+
+
+                    <div class="timer-area">
+
+                        <div class="timer-label">
+                            Writing Time
+                        </div>
+
+                        <div id="timer" class="timer">
+                            2:00
+                        </div>
+
+                        <button id="startTimer">
+                            Start Writing
+                        </button>
+
+                    </div>
+
+
+                    <div
+                        id="writingArea"
+                        class="writing-area locked"
+                    >
+
+                        <label for="studentResponse">
+                            Your response
+                        </label>
+
+                        <textarea
+                            id="studentResponse"
+                            placeholder="Write what you remember..."
+                        ></textarea>
+
+
+                        <div class="word-count">
+                            <span id="wordCount">0</span>
+                            words
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        id="timeMessage"
+                        class="time-message"
+                    ></div>
+
+
+                    <div class="controls">
+
+                        <button
+                            id="revealButton"
+                            class="secondary-button"
+                            disabled
+                        >
+                            Reveal Sample Response
+                        </button>
+
+                    </div>
+
+
+                    <div
+                        id="sampleResponse"
+                        class="sample-response"
+                    ></div>
+
+                </div>
+
+
+                <div class="navigation">
+
+                    <button
+                        id="previousPrompt"
+                        class="secondary-button"
+                    >
+                        ← Previous
+                    </button>
+
+                    <button id="nextPrompt">
+                        Next Prompt →
+                    </button>
+
+                </div>
+
+            </div>
+
         </section>
 
     </main>

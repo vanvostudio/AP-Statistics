@@ -544,12 +544,11 @@ function drawStemPlot(data, output) {
             <strong>Key:</strong>
             1 | 5 = 15 minutes
         </p>
-
-        <div class="question">
+        <p>
             <strong>Think about it:</strong>
             What information can you see in the stem-and-leaf
             plot that may be harder to see in a histogram?
-        </div>
+        </p>
     `;
 }
 
